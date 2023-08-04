@@ -6,9 +6,7 @@ ThemeData themeLight = ThemeData(
     scaffoldBackgroundColor: AppColors.white,
     brightness: Brightness.light,
     colorScheme: const ColorScheme.light(
-      primary: Colors.blue,
       secondary: Colors.white,
-      surface: AppColors.darkGreyBlue,
       background: Colors.white,
       error: Colors.red,
       onPrimary: Colors.white,
@@ -29,7 +27,7 @@ ThemeData themeLight = ThemeData(
       actionsIconTheme: const IconThemeData(color: Colors.black, size: 26),
       toolbarTextStyle: GoogleFonts.poppins(
         color: Colors.black,
-        fontSize: 18,
+        fontSize: 14,
       ),
       iconTheme: const IconThemeData(
         color: Colors.black,
@@ -40,7 +38,7 @@ ThemeData themeLight = ThemeData(
     ),
     textTheme: TextTheme(
       bodyMedium: GoogleFonts.poppins(
-          color: Colors.black, fontSize: 16, fontWeight: FontWeight.w500),
+          color: Colors.black, fontSize: 14, fontWeight: FontWeight.w400),
     ),
     tabBarTheme: const TabBarTheme(
       unselectedLabelColor: AppColors.grey,

@@ -20,5 +20,20 @@ class AppString {
       'We help you find your dream job according to your skillset, location & preference to build your career.';
   static const skip = 'Skip';
   static const next = 'Next';
+  static const jobizz = 'Jôbizz';
+  static const registration = 'Registration👍';
+  static const letsRegisterApplyToJobs = 'Let’s Register. Apply to jobs!';
+  static const fullName = 'Full Name';
+  static const email = 'E-mail';
+  static const password = 'Password';
+  static const confirmPassword = 'Confirm Password';
+  static const register = 'Register';
+  static const orContinueWith = 'Or continue with';
+  static const haveAnAccount = 'Have an account?';
+  static const login = 'Log in';
+  static const welcomeBack = 'Welcome Back';
+  static const letsLoginApplyToJobs = 'Let’s log in. Apply to jobs!';
+  static const forgotPassword = 'Forgot Password?';
+  static const haveNotAnAccount = 'Haven\'t an account?';
   static const explore = 'Explore';
 }
