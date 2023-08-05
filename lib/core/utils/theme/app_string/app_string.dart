@@ -31,7 +31,7 @@ class AppString {
   static const orContinueWith = 'Or continue with';
   static const haveAnAccount = 'Have an account?';
   static const login = 'Log in';
-  static const welcomeBack = 'Welcome Back';
+  static const welcomeBack = 'Welcome Back👋';
   static const letsLoginApplyToJobs = 'Let’s log in. Apply to jobs!';
   static const forgotPassword = 'Forgot Password?';
   static const haveNotAnAccount = 'Haven\'t an account?';

@@ -3,18 +3,16 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:icon_broken/icon_broken.dart';
 import 'package:project/core/utils/theme/app_colors/app_colors.dart';
 import 'package:project/core/utils/theme/app_string/app_string.dart';
-import 'package:project/jobizz/presentation/screens/login_screen.dart';
+import 'package:project/jobizz/presentation/screens/register_screen.dart';
 import 'package:project/jobizz/presentation/widgets/on_boarding/text_form_text_component.dart';
 
-class RegisterScreen extends StatelessWidget {
-  const RegisterScreen({super.key});
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    var nameController = TextEditingController();
     var emailController = TextEditingController();
     var passwordController = TextEditingController();
-    var confirmPasswordController = TextEditingController();
     return Scaffold(
       appBar: AppBar(
         leading: TextButton(
@@ -23,11 +21,11 @@ class RegisterScreen extends StatelessWidget {
             },
             child: const Icon(IconBroken.Arrow___Left_2)),
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
-        child: SingleChildScrollView(
-          physics: const BouncingScrollPhysics(),
-          child: SizedBox(
+      body: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
+        child: SizedBox(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -40,7 +38,7 @@ class RegisterScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 10),
                 Text(
-                  AppString.registration,
+                  AppString.welcomeBack,
                   style: Theme.of(context)
                       .textTheme
                       .bodyMedium
@@ -48,20 +46,13 @@ class RegisterScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 10),
                 Text(
-                  AppString.letsRegisterApplyToJobs,
+                  AppString.letsLoginApplyToJobs,
                   style: Theme.of(context)
                       .textTheme
                       .bodyMedium
                       ?.copyWith(color: AppColors.grey),
                 ),
-                const SizedBox(height: 36),
-                textForm(
-                  inputType: TextInputType.name,
-                  controller: nameController,
-                  label: AppString.fullName,
-                  prefixIcon: IconBroken.Profile,
-                ),
-                const SizedBox(height: 16),
+                const SizedBox(height: 40),
                 textForm(
                   inputType: TextInputType.emailAddress,
                   controller: emailController,
@@ -73,14 +64,6 @@ class RegisterScreen extends StatelessWidget {
                   inputType: TextInputType.visiblePassword,
                   controller: passwordController,
                   label: AppString.password,
-                  prefixIcon: IconBroken.Password,
-                  suffixIcon: IconBroken.Show,
-                ),
-                const SizedBox(height: 16),
-                textForm(
-                  inputType: TextInputType.visiblePassword,
-                  controller: confirmPasswordController,
-                  label: AppString.confirmPassword,
                   prefixIcon: IconBroken.Password,
                   suffixIcon: IconBroken.Show,
                 ),
@@ -97,7 +80,7 @@ class RegisterScreen extends StatelessWidget {
                   child: TextButton(
                     onPressed: () {},
                     child: Text(
-                      AppString.register,
+                      AppString.login,
                       style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                             color: AppColors.white,
                             fontSize: 16,
@@ -105,7 +88,21 @@ class RegisterScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(height: 30),
+                const SizedBox(height: 14),
+                Align(
+                  alignment: AlignmentDirectional.center,
+                  child: TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      AppString.forgotPassword,
+                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                            color: AppColors.lightGreyBlue,
+                            fontWeight: FontWeight.w500,
+                          ),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 40),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -131,7 +128,7 @@ class RegisterScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                const SizedBox(height: 20),
+                const SizedBox(height: 30),
                 Row(
                   children: [
                     Expanded(
@@ -169,12 +166,12 @@ class RegisterScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                const SizedBox(height: 8),
+                const SizedBox(height: 30),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      AppString.haveAnAccount,
+                      AppString.haveNotAnAccount,
                       style: Theme.of(context)
                           .textTheme
                           .bodyMedium
@@ -185,12 +182,12 @@ class RegisterScreen extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const LoginScreen(),
+                            builder: (context) => const RegisterScreen(),
                           ),
                         );
                       },
                       child: Text(
-                        AppString.login,
+                        AppString.register,
                         style: Theme.of(context)
                             .textTheme
                             .bodyMedium
