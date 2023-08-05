@@ -25,6 +25,7 @@ class AppString {
   static const letsRegisterApplyToJobs = 'Let’s Register. Apply to jobs!';
   static const fullName = 'Full Name';
   static const email = 'E-mail';
+  static const phoneNumber = 'Phone Number';
   static const password = 'Password';
   static const confirmPassword = 'Confirm Password';
   static const register = 'Register';
@@ -35,5 +36,8 @@ class AppString {
   static const letsLoginApplyToJobs = 'Let’s log in. Apply to jobs!';
   static const forgotPassword = 'Forgot Password?';
   static const haveNotAnAccount = 'Haven\'t an account?';
+  static const enterYourEmailOrPhoneNumberWeWillSendYouVerificationCode =
+      'Enter your email or phone number, we will send you verification code';
+  static const sendCode = 'Send Code';
   static const explore = 'Explore';
 }

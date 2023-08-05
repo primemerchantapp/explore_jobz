@@ -13,6 +13,7 @@ class RegisterScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     var nameController = TextEditingController();
     var emailController = TextEditingController();
+    var phoneController = TextEditingController();
     var passwordController = TextEditingController();
     var confirmPasswordController = TextEditingController();
     return Scaffold(
@@ -61,14 +62,21 @@ class RegisterScreen extends StatelessWidget {
                   label: AppString.fullName,
                   prefixIcon: IconBroken.Profile,
                 ),
-                const SizedBox(height: 16),
+                const SizedBox(height: 12),
                 textForm(
                   inputType: TextInputType.emailAddress,
                   controller: emailController,
                   label: AppString.email,
                   prefixIcon: IconBroken.Message,
                 ),
-                const SizedBox(height: 16),
+                const SizedBox(height: 12),
+                textForm(
+                  inputType: TextInputType.phone,
+                  controller: phoneController,
+                  label: AppString.phoneNumber,
+                  prefixIcon: IconBroken.Call,
+                ),
+                const SizedBox(height: 12),
                 textForm(
                   inputType: TextInputType.visiblePassword,
                   controller: passwordController,
@@ -76,7 +84,7 @@ class RegisterScreen extends StatelessWidget {
                   prefixIcon: IconBroken.Password,
                   suffixIcon: IconBroken.Show,
                 ),
-                const SizedBox(height: 16),
+                const SizedBox(height: 12),
                 textForm(
                   inputType: TextInputType.visiblePassword,
                   controller: confirmPasswordController,
@@ -84,7 +92,7 @@ class RegisterScreen extends StatelessWidget {
                   prefixIcon: IconBroken.Password,
                   suffixIcon: IconBroken.Show,
                 ),
-                const SizedBox(height: 26),
+                const SizedBox(height: 22),
                 Container(
                   width: double.infinity,
                   height: 60,
@@ -105,7 +113,7 @@ class RegisterScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(height: 30),
+                const SizedBox(height: 25),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -131,7 +139,7 @@ class RegisterScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                const SizedBox(height: 20),
+                const SizedBox(height: 12),
                 Row(
                   children: [
                     Expanded(
