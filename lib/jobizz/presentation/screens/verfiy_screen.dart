@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:project/core/utils/fonts/icon_broken.dart';
 import 'package:project/core/utils/theme/app_colors/app_colors.dart';
 import 'package:project/core/utils/theme/app_string/app_string.dart';
@@ -9,21 +10,19 @@ class VerifyScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var emailController = TextEditingController();
-    var phoneController = TextEditingController();
+    var formKey = GlobalKey<FormState>();
     return Scaffold(
       appBar: AppBar(
         leading: TextButton(
             onPressed: () {
               Navigator.pop(context);
-              ///;ll;'l';
             },
             child: const Icon(IconBroken.Arrow___Left_2)),
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-        child: DefaultTabController(
-          length: 2,
+      body: Form(
+        key: formKey,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
           child: Column(
             children: [
               Text(
@@ -51,41 +50,141 @@ class VerifyScreen extends StatelessWidget {
                     .bodyMedium
                     ?.copyWith(color: AppColors.grey),
               ),
-              const SizedBox(height: 100),
-              const Align(
-                alignment: AlignmentDirectional.centerEnd,
-                child: TabBar(
-                    indicator: BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(20)),
-                        color: AppColors.silver),
-                    physics: BouncingScrollPhysics(),
-                    tabs: [
-                      Tab(
-                        text: AppString.email,
+              const SizedBox(height: 55),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  SizedBox(
+                    width: 64,
+                    height: 68,
+                    child: TextFormField(
+                      style: Theme.of(context).textTheme.headlineSmall,
+                      keyboardType: TextInputType.number,
+                      textAlign: TextAlign.center,
+                      inputFormatters: [
+                        LengthLimitingTextInputFormatter(1),
+                        FilteringTextInputFormatter.digitsOnly,
+                      ],
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12),
+                          borderSide: const BorderSide(
+                              color: AppColors.lightGrey, width: 1.0),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12),
+                          borderSide: const BorderSide(
+                              color: AppColors.lightGrey, width: 1.0),
+                        ),
+                        fillColor: AppColors.lightGrey,
                       ),
-                      Tab(
-                        text: AppString.phoneNumber,
+                      onChanged: (value) {
+                        if (value.length == 1) {
+                          FocusScope.of(context).nextFocus();
+                        }
+                      },
+                    ),
+                  ),
+                  SizedBox(
+                    width: 64,
+                    height: 68,
+                    child: TextFormField(
+                      style: Theme.of(context).textTheme.headlineSmall,
+                      keyboardType: TextInputType.number,
+                      textAlign: TextAlign.center,
+                      inputFormatters: [
+                        LengthLimitingTextInputFormatter(1),
+                        FilteringTextInputFormatter.digitsOnly,
+                      ],
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12),
+                          borderSide: const BorderSide(
+                              color: AppColors.lightGrey, width: 1.0),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12),
+                          borderSide: const BorderSide(
+                              color: AppColors.lightGrey, width: 1.0),
+                        ),
+                        fillColor: AppColors.lightGrey,
                       ),
-                    ]),
+                      onChanged: (value) {
+                        if (value.length == 1) {
+                          FocusScope.of(context).nextFocus();
+                        }
+                      },
+                    ),
+                  ),
+                  SizedBox(
+                    width: 64,
+                    height: 68,
+                    child: TextFormField(
+                      style: Theme.of(context).textTheme.headlineSmall,
+                      keyboardType: TextInputType.number,
+                      textAlign: TextAlign.center,
+                      validator: (value) {
+                        if (value!.isEmpty) return AppString.mustNotBeEmpty;
+                        return null;
+                      },
+                      inputFormatters: [
+                        LengthLimitingTextInputFormatter(1),
+                        FilteringTextInputFormatter.digitsOnly,
+                      ],
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12),
+                          borderSide: const BorderSide(
+                              color: AppColors.lightGrey, width: 1.0),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12),
+                          borderSide: const BorderSide(
+                              color: AppColors.lightGrey, width: 1.0),
+                        ),
+                        fillColor: AppColors.lightGrey,
+                      ),
+                      onChanged: (value) {
+                        if (value.length == 1) {
+                          FocusScope.of(context).nextFocus();
+                        }
+                      },
+                    ),
+                  ),
+                  SizedBox(
+                    width: 64,
+                    height: 68,
+                    child: TextFormField(
+                      style: Theme.of(context).textTheme.headlineSmall,
+                      keyboardType: TextInputType.number,
+                      textAlign: TextAlign.center,
+                      inputFormatters: [
+                        LengthLimitingTextInputFormatter(1),
+                        FilteringTextInputFormatter.digitsOnly,
+                      ],
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12),
+                          borderSide: const BorderSide(
+                              color: AppColors.lightGrey, width: 1.0),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12),
+                          borderSide: const BorderSide(
+                              color: AppColors.lightGrey, width: 1.0),
+                        ),
+                        fillColor: AppColors.lightGrey,
+                      ),
+                      onChanged: (value) {
+                        if (value.length == 1) {
+                          FocusScope.of(context).nextFocus();
+                        }
+                      },
+                    ),
+                  ),
+                ],
               ),
               const SizedBox(height: 55),
-              SizedBox(
-                height: 200,
-                child: TabBarView(children: [
-                  textForm(
-                    inputType: TextInputType.emailAddress,
-                    controller: emailController,
-                    label: AppString.email,
-                    prefixIcon: IconBroken.Message,
-                  ),
-                  textForm(
-                    inputType: TextInputType.phone,
-                    controller: phoneController,
-                    label: AppString.phoneNumber,
-                    prefixIcon: IconBroken.Call,
-                  ),
-                ]),
-              ),
               Container(
                 width: double.infinity,
                 height: 60,
@@ -96,7 +195,16 @@ class VerifyScreen extends StatelessWidget {
                   ),
                 ),
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    if(formKey.currentState!.validate()){
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const VerifyScreen(),
+                        ),
+                      );
+                    }
+                  },
                   child: Text(
                     AppString.sendCode,
                     style: Theme.of(context).textTheme.bodyMedium?.copyWith(

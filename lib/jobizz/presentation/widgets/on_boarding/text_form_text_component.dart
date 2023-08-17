@@ -1,18 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:project/core/utils/theme/app_colors/app_colors.dart';
-import 'package:project/core/utils/theme/app_colors/app_colors.dart';
-import 'package:project/core/utils/theme/app_colors/app_colors.dart';
-import 'package:project/core/utils/theme/app_colors/app_colors.dart';
 
 Widget textForm({
   required TextInputType inputType,
   required TextEditingController controller,
   FormFieldValidator<String>? validate,
   Function? onSubmit,
-  required String label,
+  String? label,
   bool isPassword = false,
   int? maxLength,
-  required IconData prefixIcon,
+  IconData? prefixIcon,
   double? height,
   double? width,
   double radius = 10,
