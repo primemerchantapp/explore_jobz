@@ -27,6 +27,7 @@ class AppString {
   static const email = 'E-mail';
   static const phoneNumber = 'Phone Number';
   static const password = 'Password';
+  static const newPassword = 'New Password';
   static const confirmPassword = 'Confirm Password';
   static const register = 'Register';
   static const orContinueWith = 'Or continue with';
@@ -39,5 +40,12 @@ class AppString {
   static const enterYourEmailOrPhoneNumberWeWillSendYouVerificationCode =
       'Enter your email or phone number, we will send you verification code';
   static const sendCode = 'Send Code';
+  static const verifyCode = 'Verify Code';
+  static const enterYourVerificationCodeFromYourEmailOrPhoneNumberThatWeHaveSent =
+      'Enter your verification code from your email or phone number that we’ve sent';
+  static const mustNotBeEmpty = 'must not be empty';
+  static const verify = 'Verify';
+  static const resetPassword = 'Reset Password';
+  static const enterYourNewPasswordAndConfirmTheNewPasswordToResetPassword = 'Enter your new password and confirm the new password to reset password';
   static const explore = 'Explore';
 }

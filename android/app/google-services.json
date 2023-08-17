@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "564009938655",
+    "project_id": "jobizz-a69b5",
+    "storage_bucket": "jobizz-a69b5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:564009938655:android:4d28ddc66deab998e1436a",
+        "android_client_info": {
+          "package_name": "com.jobizz.own.job"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "564009938655-b7enq38mt1aie0h6nb5o8a80932h1qad.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBk6DCDpb0cdXmi0-csyb87u94FQhV2R78"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "564009938655-b7enq38mt1aie0h6nb5o8a80932h1qad.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
