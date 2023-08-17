@@ -47,5 +47,7 @@ class AppString {
   static const verify = 'Verify';
   static const resetPassword = 'Reset Password';
   static const enterYourNewPasswordAndConfirmTheNewPasswordToResetPassword = 'Enter your new password and confirm the new password to reset password';
+  static const confirmation = 'Confirmation';
+  static const yourPasswordHasBeenChangedPleaseLoginWithYourNewPassword = 'Your password has been changed. Please log in with your new password.';
   static const explore = 'Explore';
 }

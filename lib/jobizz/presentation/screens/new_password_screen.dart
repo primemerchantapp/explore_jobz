@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:project/core/utils/fonts/icon_broken.dart';
 import 'package:project/core/utils/theme/app_colors/app_colors.dart';
 import 'package:project/core/utils/theme/app_string/app_string.dart';
+import 'package:project/jobizz/presentation/screens/confirmation_screen.dart';
 import 'package:project/jobizz/presentation/screens/new_password_screen.dart';
 import 'package:project/jobizz/presentation/widgets/on_boarding/text_form_text_component.dart';
 
@@ -99,7 +100,7 @@ class NewPasswordScreen extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const NewPasswordScreen(),
+                            builder: (context) => const ConfirmationScreen(),
                           ),
                         );
                       }
