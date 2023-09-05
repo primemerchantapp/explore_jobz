@@ -4,8 +4,9 @@ import 'package:icon_broken/icon_broken.dart';
 import 'package:project/core/utils/theme/app_colors/app_colors.dart';
 import 'package:project/core/utils/theme/app_string/app_string.dart';
 import 'package:project/jobizz/presentation/screens/forgot_password_screen.dart';
+import 'package:project/jobizz/presentation/screens/job_type_screen.dart';
 import 'package:project/jobizz/presentation/screens/register_screen.dart';
-import 'package:project/jobizz/presentation/widgets/on_boarding/text_form_text_component.dart';
+import 'package:project/jobizz/presentation/widgets/text_form_text_component.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -79,7 +80,14 @@ class LoginScreen extends StatelessWidget {
                     ),
                   ),
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const JobTypeScreen(),
+                        ),
+                      );
+                    },
                     child: Text(
                       AppString.login,
                       style: Theme.of(context).textTheme.bodyMedium?.copyWith(

@@ -49,5 +49,17 @@ class AppString {
   static const enterYourNewPasswordAndConfirmTheNewPasswordToResetPassword = 'Enter your new password and confirm the new password to reset password';
   static const confirmation = 'Confirmation';
   static const yourPasswordHasBeenChangedPleaseLoginWithYourNewPassword = 'Your password has been changed. Please log in with your new password.';
-  static const explore = 'Explore';
+  static const whatTypeOfJobYouAreLookingFor = 'What type of job you’re looking for?';
+  static const designer = 'Designer';
+  static const developer = 'Developer';
+  static const administrative   = 'Administrative  ';
+  static const marketing   = 'Marketing  ';
+  static const management   = 'Management  ';
+  static const others   = 'Others  ';
+  static const fullTime   = 'Full-Time  ';
+  static const partTime   = 'Part-Time  ';
+  static const contract   = 'Contract  ';
+  static const internship   = 'Internship  ';
+  static const freelance   = 'Freelance  ';
+  static const save   = 'Save  ';
 }

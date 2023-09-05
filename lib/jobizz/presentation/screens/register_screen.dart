@@ -3,8 +3,9 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:icon_broken/icon_broken.dart';
 import 'package:project/core/utils/theme/app_colors/app_colors.dart';
 import 'package:project/core/utils/theme/app_string/app_string.dart';
+import 'package:project/jobizz/presentation/screens/job_type_screen.dart';
 import 'package:project/jobizz/presentation/screens/login_screen.dart';
-import 'package:project/jobizz/presentation/widgets/on_boarding/text_form_text_component.dart';
+import 'package:project/jobizz/presentation/widgets/text_form_text_component.dart';
 
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({super.key});
@@ -103,7 +104,14 @@ class RegisterScreen extends StatelessWidget {
                     ),
                   ),
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const JobTypeScreen(),
+                        ),
+                      );
+                    },
                     child: Text(
                       AppString.register,
                       style: Theme.of(context).textTheme.bodyMedium?.copyWith(

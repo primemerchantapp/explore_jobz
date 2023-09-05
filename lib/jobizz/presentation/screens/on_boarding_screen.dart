@@ -4,7 +4,8 @@ import 'package:project/core/utils/boarding_model.dart';
 import 'package:project/core/utils/theme/app_colors/app_colors.dart';
 import 'package:project/core/utils/theme/app_string/app_string.dart';
 import 'package:project/jobizz/presentation/screens/register_screen.dart';
-import 'package:project/jobizz/presentation/widgets/on_boarding/boarding_items.dart';
+import 'package:project/jobizz/presentation/widgets/boarding_items.dart';
+import 'package:project/jobizz/presentation/widgets/text_form_text_component.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnBoardingScreen extends StatefulWidget {
